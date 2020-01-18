@@ -1,8 +1,8 @@
 const request = require("request");
-const input = process.argv.slice(2);
+// const input = process.argv.slice(2);
 
 const fetchBreedDescription = function(input, callback) {
-  const URL = "https://api.thecatapi.com/v1/breeds/search?q=" + input[0];
+  const URL = "https://api.thecatapi.com/v1/breeds/search?q=" + `${input}`;
   request(URL, (error, response, body) => {
     const data = JSON.parse(body);
 
